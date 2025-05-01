@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="green">#4CAF50</color>
+    <color name="red">#F44336</color>
+
+    <array name="pie_chart_colors">
+        <item>#FF6384</item>
+        <item>#36A2EB</item>
+        <item>#FFCE56</item>
+        <item>#4BC0C0</item>
+        <item>#9966FF</item>
+        <item>#FF9F40</item>
+    </array>
+</resources>

@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F0F4F8"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:id="@+id/mainLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/balanceTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Баланс: 0.00 ₽"
+            android:textSize="20sp"
+            android:textColor="#2E7D32"
+            android:textStyle="bold"
+            android:layout_gravity="center_horizontal"
+            android:padding="12dp" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="2"
+            android:layout_marginTop="16dp">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:padding="12dp"
+                android:background="#E3F2FD"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp"
+                android:elevation="2dp">
+
+                <TextView android:text="Доход"
+                    android:textStyle="bold"
+                    android:textColor="#1565C0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <EditText
+                    android:id="@+id/incomeAmountEditText"
+                    android:hint="Сумма"
+                    android:importantForAutofill="no"
+                    android:inputType="numberDecimal"
+                    android:minHeight="48dp"
+                    android:background="@android:drawable/edit_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <Spinner
+                    android:id="@+id/incomeCategorySpinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <Button
+                    android:id="@+id/addIncomeButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Добавить"
+                    android:backgroundTint="#64B5F6"
+                    android:textColor="#FFFFFF"
+                    android:layout_marginTop="8dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:padding="12dp"
+                android:background="#FFEBEE"
+                android:layout_marginStart="8dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp"
+                android:elevation="2dp">
+
+                <TextView
+                    android:text="Расход"
+                    android:textStyle="bold"
+                    android:textColor="#C62828"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <EditText
+                    android:id="@+id/expenseAmountEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Сумма"
+                    android:minHeight="48dp"
+                    android:inputType="numberDecimal"
+                    android:background="@android:drawable/edit_text" />
+
+                <Spinner
+                    android:id="@+id/expenseCategorySpinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <Button
+                    android:id="@+id/addExpenseButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Добавить"
+                    android:backgroundTint="#EF5350"
+                    android:textColor="#FFFFFF"
+                    android:layout_marginTop="8dp"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/summaryTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Доходов: 0.00 ₽ | Расходов: 0.00 ₽"
+            android:textSize="16sp"
+            android:textColor="#37474F"
+            android:layout_marginTop="16dp"
+            android:layout_gravity="center_horizontal" />
+
+        <TextView
+            android:id="@+id/emptyState"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Нет операций"
+            android:textSize="16sp"
+            android:textColor="#B0BEC5"
+            android:layout_marginTop="16dp"
+            android:layout_gravity="center_horizontal"
+            android:visibility="gone" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:paddingBottom="24dp"/>
+    </LinearLayout>
+</ScrollView>
